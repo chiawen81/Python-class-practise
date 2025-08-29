@@ -81,23 +81,41 @@ def sortNum(numAry, isDsc=False):
 #     print("發生錯誤，需傳入正整數~!")
 
 
-# 5. 利用「%」、「//」求得反轉的數字（ex:12345→54321）
-user_input = input("Q5. 請輸入任意一個正整數: ")
-reversed_str = ""
+# # 5. 利用「%」、「//」求得反轉的數字（ex:12345→54321）
+# user_input = input("Q5. 請輸入任意一個正整數: ")
+# reversed_str = ""
 
-# 驗證是正整數
-if isPositiveInt(user_input):
-    num = int(user_input)
-    digit_count = len(user_input)
+# # 驗證是正整數
+# if isPositiveInt(user_input):
+#     num = int(user_input)
+#     digit_count = len(user_input)
 
-    for i in range(1, digit_count + 1):
-        print(f"第{i}圈，目前數字是 {num}")
-        digit = num % 10
-        print(f"正在處理的位數是 {digit}")
-        reversed_str += str(digit)
-        print(f"新字串是 {reversed_str}")
-        num //= 10
-        print(f"下個迴圈要處理的數字是 {num} --------")
+#     for i in range(1, digit_count + 1):
+#         print(f"第{i}圈，目前數字是 {num}")
+#         digit = num % 10
+#         print(f"正在處理的位數是 {digit}")
+#         reversed_str += str(digit)
+#         print(f"新字串是 {reversed_str}")
+#         num //= 10
+#         print(f"下個迴圈要處理的數字是 {num} --------")
 
-else:
-    print("發生錯誤，需傳入正整數~!")
+# else:
+#     print("發生錯誤，需傳入正整數~!")
+
+
+# 6. 輸入一個正整數，求n!值
+# q6_num = input("Q6. 請輸入任意正整數求n!")
+# total = 1
+
+# # 驗證是正整數
+# if isPositiveInt(q6_num):
+#     q6_num = int(q6_num)
+
+#     for item in range(1, q6_num + 1):
+#         total = total * item
+
+
+# else:
+#     print("發生錯誤，需傳入正整數~!")
+
+# print(f"Q6. {q6_num}! 為 {total}")
