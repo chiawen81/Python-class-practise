@@ -59,19 +59,20 @@ q3_num1 = input("Q3. 請輸入第一個正整數")
 q3_num2 = input("Q3. 請輸入第二個正整數(需大於第一個數字)")
 q3_record_muti49 = ""
 q3_total = 0
+valid_count = 0
 
-if isPositiveInt(q3_num1) and isPositiveInt(q3_num2) and (q3_num2 > q3_num1):
+if isPositiveInt(q3_num1) and isPositiveInt(q3_num2) and (int(q3_num2) > int(q3_num1)):
     q3_num1 = int(q3_num1)
     q3_num2 = int(q3_num2)
-    valid_count = 0
+    valid_count = 0  # 清空
 
     for idx, item in enumerate(range(q3_num1, q3_num2 + 1)):
-        if item % 4 == 0 or item % 9 == 0:
+        if (item % 4 == 0) or (item % 9 == 0):
             q3_record_muti49 = q3_record_muti49 + str(item) + " "
             q3_total = q3_total + item
             valid_count += 1
 
-            if idx + 1 % 10 == 0:
+            if (idx + 1) % 10 == 0:
                 q3_record_muti49 = q3_record_muti49 + "\n"
 
 else:
@@ -80,10 +81,15 @@ else:
 
 print(
     f"""
-       1. 第一個正整數{q3_num1}，第二個正整數{q3_num2}
-       2. 4或9倍數為：
-       {q3_record_muti49}
+       1. 第一個正整數 {q3_num1}，第二個正整數 {q3_num2}
+       2. 4或9倍數為： {q3_record_muti49}
        3. 共有{valid_count}個
-       4. 總和為
+       4. 總和為{q3_total}
       """
 )
+
+
+### 題目四 ###
+# 由使用者輸入一個正整數。
+# 將這個正整數以反轉的順序輸出。
+# 若輸入值為0，就輸出0
