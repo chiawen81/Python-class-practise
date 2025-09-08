@@ -50,46 +50,68 @@ def get_lotto_without_same():
 print(f"Q2. 取得不重複的樂透號碼{get_lotto_without_same()}")
 
 
-### 題目三 ###
-# 人工輸入12個正整數，存入串列，排序後輸出結果
+# ### 題目三 ###
+# # 人工輸入12個正整數，存入串列，排序後輸出結果
 
-# Step1：取得user輸入的字串，並要求user以","分隔這12個正整數
-original_data = input("Q3. 請輸入12個正整數，並以','號區隔")
-
-
-# Step2：將這12個正整數裝進陣列裡
-def trans_data_to_list():
-    new_list = []
-
-    if "," in original_data:
-        new_list = original_data.split(",")
-
-    return new_list
+# # Step1：取得user輸入的字串，並要求user以","分隔這12個正整數
+# original_data = input("Q3. 請輸入12個正整數，並以','號區隔")
 
 
-# Step3：驗證並轉成陣列包數字
-def trans_int(list_str):
-    new_list = []
+# # Step2：將這12個正整數裝進陣列裡
+# def trans_data_to_list():
+#     new_list = []
 
-    # 驗證：使用者有輸入12個數字
-    if len(list_str) == 12:
-        new_list = [int(item) for item in list_str if isPositiveInt(item)]
+#     if "," in original_data:
+#         new_list = original_data.split(",")
 
-    return new_list
-
-
-# 主程式
-def get_list():
-    list_str = trans_data_to_list()
-    # print(f"取得陣列：{list_str}")
-
-    list_num = trans_int(list_str)
-    # print(f"取得轉成數字後的陣列：{list_num}")
-
-    new_list = list_num.sort() if (len(list_num) == 12) else []
-    # print(f"取得排列後的陣列：{  list_num}")
-
-    return new_list
+#     return new_list
 
 
-print(f"main-取得排列後的陣列：{get_list()}")
+# # Step3：驗證並轉成陣列包數字
+# def trans_int(list_str):
+#     new_list = []
+
+#     # 驗證：使用者有輸入12個數字
+#     if len(list_str) == 12:
+#         new_list = [int(item) for item in list_str if isPositiveInt(item)]
+
+#     return new_list
+
+
+# # 主程式
+# def get_list():
+#     list_str = trans_data_to_list()
+#     # print(f"取得陣列：{list_str}")
+
+#     list_num = trans_int(list_str)
+#     # print(f"取得轉成數字後的陣列：{list_num}")
+
+#     new_list = list_num.sort() if (len(list_num) == 12) else []
+#     # print(f"取得排列後的陣列：{  list_num}")
+
+#     return new_list
+
+
+# print(f"main-取得排列後的陣列：{get_list()}")
+
+
+### 題目四 ###
+# 隨機輸出五張撲克牌，不論花色，點數存放到串列中，計算點數
+def get_random_poker():
+    total = 0
+    card_record = ""
+
+    for item in range(5):
+        num = random.randint(1, 13)
+        total = total + num
+        card_record = card_record + str(num) + ","
+
+    print(
+        f"""Q4. 
+拿的牌:{card_record}
+加總:{total}
+          """
+    )
+
+
+get_random_poker()
