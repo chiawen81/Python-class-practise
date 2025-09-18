@@ -76,7 +76,7 @@ print(set6)
 ##########################################
 '''
 NOTE:
-有 len、max 、min、sum、in、not in、*、+ 
+有 len、max 、min、sum、in、not in
 '''
 set7={5,32,8,2,4,7,5}
 print(len(set7))   # Output:6
