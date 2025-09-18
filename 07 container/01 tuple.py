@@ -1,12 +1,13 @@
 # 基本語法
 ##################################################
 '''
+NOTE:
 1. 元組的元素值不能改變
 2. 無法刪除或更改個別資料，但可以整個覆蓋或刪除
 3. 沒有內建的加入API，但可以利用"+"把元素加入元組 
    或是利用"*"複製元素
 '''
-###### 1. 元組型別 ######
+###### 1. 資料形式 ######
 ########################
 tuple1=(2,4,1,3,9,5)
 print(tuple1)
@@ -20,15 +21,17 @@ print(tuple1)
 # Output:(2, 4)
 
 
+###### 3. 利用+相加群組 ######
+#############################
 '''
+NOTE:
 增加一個元素時後面加逗號 例如：
 tuple1+=(1,)
 '''
-###### 3. 利用+相加群組 ######
-#############################
 tuple1+=(1,)
 print(tuple1)
 # Output:(2, 4, 1)
+
 tuple1=tuple1+(2,4)
 print(tuple1)
 # Output:(2, 4, 1, 2, 4)
@@ -53,11 +56,15 @@ print(tuple5)
 
 ###### 6. 可以用的串列API ######
 ###############################
-# len、max 、min、sum、in、not in、*、+ 
+'''
+NOTE:
+有 len、max 、min、sum、in、not in、*、+ 
+'''
 tuplt6=(1,2,3,4,5,6,7,8,9,10)
 print(len(tuplt6))   # Output:10
 print(max(tuplt6))   # Output:10
 print(min(tuplt6))   # Output:1
+print(sum(tuplt6))   # Output:55
 print(1 in tuplt6)   # Output:True
 print(5 not in tuplt6)   # Output:False
 
